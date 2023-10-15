@@ -25,9 +25,9 @@ function showData(dataArray) {
 
 
 async function tomarDatosAutos (url){
-  let response = await fetch(url);
+  let response = fetch(url);
   if (response.ok){
-    let responseContents = await response.json();
+    let responseContents = response.json();
     showData(responseContents.products);
   } else {
     alert("HTTP ERROR: " + response.status);
